@@ -1,32 +1,34 @@
-// swift-tools-version:6.0
+// swift-tools-version:5.1
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let package = Package(
-    name: "TillhubCocoaAsyncSocket",
+    name: "CocoaAsyncSocket",
     platforms: [
-        .iOS(.v15)
+        .iOS(.v9),
+        .macOS(.v10_10),
+        .tvOS(.v9)
     ],
     products: [
         .library(
-            name: "TillhubCocoaAsyncSocket",
-            targets: ["TillhubCocoaAsyncSocket"]),
+            name: "CocoaAsyncSocket",
+            targets: ["CocoaAsyncSocket"]),
     ],
     dependencies: [],
     targets: [
         .target(
-            name: "TillhubCocoaAsyncSocket",
+            name: "CocoaAsyncSocket",
             dependencies: [],
             path: "Source/GCD",
             publicHeadersPath: ""),
 
         .testTarget(name: "SharedObjCTests",
-                    dependencies: ["TillhubCocoaAsyncSocket"],
+                    dependencies: ["CocoaAsyncSocket"],
                     path: "Tests/Shared/ObjC"),
 
         .testTarget(name: "SharedSwiftTests",
-                    dependencies: ["TillhubCocoaAsyncSocket"],
+                    dependencies: ["CocoaAsyncSocket"],
                     path: "Tests/Shared/Swift")
     ]
 )
