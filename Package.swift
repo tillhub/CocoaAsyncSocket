@@ -1,4 +1,4 @@
-// swift-tools-version:5.1
+// swift-tools-version:6.0
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -6,9 +6,7 @@ import PackageDescription
 let package = Package(
     name: "TillhubCocoaAsyncSocket",
     platforms: [
-        .iOS(.v9),
-        .macOS(.v10_10),
-        .tvOS(.v9)
+        .iOS(.v15)
     ],
     products: [
         .library(
