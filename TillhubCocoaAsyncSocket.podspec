@@ -28,7 +28,7 @@ Updated and maintained by Deusty LLC and the Apple development community.
 
   s.requires_arc = true
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '12.0'
 
   s.ios.frameworks = 'CFNetwork', 'Security'
   s.tvos.frameworks = 'CFNetwork', 'Security'
